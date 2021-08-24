@@ -1,19 +1,20 @@
-import React, { useEffect } from 'react'
-import { useDispatch, useSelector } from 'react-redux'
-import { setPhotos } from '../../redux/action';
+import React from 'react'
+// import { useDispatch, useSelector } from 'react-redux'
+// import { setPhotos } from '../../redux/action';
 import { PhotosWrapper } from './PhotosWrapper';
 
 
-const PhotosData = () => {
+const PhotosData = (props) => {
 
-    const dispatch = useDispatch();
+    // const dispatch = useDispatch();
 
-    useEffect(() => {
-        setPhotos(dispatch);
+    // useEffect(() => {
+    //     setPhotos(dispatch);
+    // const data = useSelector(state => state.photos)
+    // }, [])
 
-    }, [])
+    const { data } = props
 
-    const data = useSelector(state => state.photos)
     return (
         <PhotosWrapper>
             <div className="container">

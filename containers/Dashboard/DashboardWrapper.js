@@ -44,6 +44,10 @@ display: flex;
 
 .rightBar {
     flex: 1;
+    .header {
+        background: url("https://wallpapercrafter.com/desktop/72698-gran-turismo-sport-games-4k-2019-games-hd-honda-nsx-honda-artstation.jpg");
+        background-size: cover;
+    }
 }
 `
 

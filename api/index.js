@@ -35,3 +35,14 @@ export const getPhotos = async () => {
         return { error: true }
     }
 }
+export const getUsers = async () => {
+    try {
+        const res = await axios.get(`https://jsonplaceholder.typicode.com/users?_limit=10`);
+        console.log(res);
+
+        return res.data;
+    } catch (error) {
+        console.error(error)
+        return { error: true }
+    }
+};

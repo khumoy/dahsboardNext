@@ -1,19 +1,24 @@
 import { faCheckCircle } from '@fortawesome/free-regular-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { Table, TableBody, TableCell, TableHead, TableRow } from '@material-ui/core';
-import React, { useEffect } from 'react'
-import { useDispatch, useSelector } from 'react-redux';
-import { setTodos } from '../../redux/action';
+import React from 'react'
+// import { useDispatch, useSelector } from 'react-redux';
+
+// import { setTodos } from '../../redux/action';
 import TodosWrapper from './TodosWrapper'
 
-const Todos = () => {
-    const dispatch = useDispatch();
+const Todos = (props) => {
 
-    useEffect(() => {
-        setTodos(dispatch);
-    }, [])
+    // const dispatch = useDispatch();
 
-    const data = useSelector(state => state.todos);
+    // useEffect(() => {
+    //     setTodos(dispatch);
+    // }, [])
+
+    // const data = useSelector(state => state.todos);
+    console.log(props)
+
+    const { data } = props
 
     return (
         <TodosWrapper>
@@ -29,21 +34,24 @@ const Todos = () => {
                         </TableRow>
                     </TableHead>
                     <TableBody className="text-white">
-                        {data.map(v => <TableRow>
-                            <TableCell>{v.id}</TableCell>
-                            {/* <TableCell>{v.userId}</TableCell> */}
-                            <TableCell>{v.title}</TableCell>
-                            <TableCell>
-                                {v.completed &&
-                                    <FontAwesomeIcon color="green" icon={faCheckCircle} />
-                                    || ""}
-                            </TableCell>
-                        </TableRow>)}
+                        {data?.map(v => (
+                            <TableRow>
+                                <TableCell>{v.id}</TableCell>
+                                {/* <TableCell>{v.userId}</TableCell> */}
+                                <TableCell>{v.title}</TableCell>
+                                <TableCell>
+                                    {v.completed &&
+                                        <FontAwesomeIcon color="green" icon={faCheckCircle} />
+                                        || ""}
+                                </TableCell>
+                            </TableRow>
+                        ))}
                     </TableBody>
                 </Table>
             </div>
-        </TodosWrapper>
+        </TodosWrapper >
     )
 }
+
 
 export default Todos

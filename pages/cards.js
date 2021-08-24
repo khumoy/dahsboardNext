@@ -2,7 +2,7 @@ import React from 'react'
 import CardsData from '../containers/CardsData'
 import Dashboard from '../containers/Dashboard'
 
-const cards = () => {
+const Cards = () => {
     return (
         <Dashboard menu={'cards'}>
             <CardsData />
@@ -10,4 +10,6 @@ const cards = () => {
     )
 }
 
-export default cards
+
+
+export default Cards

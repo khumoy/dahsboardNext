@@ -1,17 +1,19 @@
-import React, { useEffect } from 'react'
-import { useDispatch, useSelector } from 'react-redux'
-import { setAlbums } from '../../redux/action'
+import React from 'react'
+// import { useDispatch, useSelector } from 'react-redux'
+// import { setAlbums } from '../../redux/action'
 import { AlbumWrapper } from './AlbumWrapper';
 
-const AlbumsData = () => {
+const AlbumsData = (props) => {
 
-    const dispatch = useDispatch();
+    // const dispatch = useDispatch();
 
-    useEffect(() => {
-        setAlbums(dispatch)
-    }, [])
+    // useEffect(() => {
+    //     setAlbums(dispatch)
+    // }, [])
 
-    const data = useSelector(state => state.albums);
+    // const data = useSelector(state => state.albums);
+
+    const { data } = props
     return (
         <AlbumWrapper>
             <div className="container">

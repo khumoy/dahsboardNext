@@ -46,9 +46,9 @@ const Dashboard = ({ children, menu }) => {
                 </List>
             </div>
             <div className="rightBar">
-                <header className="shadow">
+                <header className="shadow header">
                     <Button onClick={() => toggleMenu(dispatch)} variant="contained " disableElevation className="btn ">
-                        <FontAwesomeIcon size="lg" icon={faBars} />
+                        <FontAwesomeIcon size="lg" color="white" icon={faBars} />
                     </Button>
                 </header>
                 <div className="content">
