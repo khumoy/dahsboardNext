@@ -18,8 +18,8 @@ const AlbumsData = (props) => {
         <AlbumWrapper>
             <div className="container">
                 <div className="row">
-                    {data.map(v => <div className="col-sm-6 col-md-3">
-                        <div className="cards">
+                    {data?.map(v => <div className="col-sm-6 col-md-3">
+                        <div key={v.id} className="cards">
                             <span>
                                 {v.id}
                             </span>

@@ -20,7 +20,7 @@ const Users = (props) => {
                     </TableHead>
                     <TableBody>
                         {data.map(v => (
-                            <TableRow>
+                            <TableRow key={v.id}>
                                 <TableCell>{v.id}</TableCell>
                                 <TableCell>{v.username}</TableCell>
                                 <TableCell>{v.email}</TableCell>

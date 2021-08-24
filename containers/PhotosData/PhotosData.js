@@ -19,8 +19,8 @@ const PhotosData = (props) => {
         <PhotosWrapper>
             <div className="container">
                 <div className="row  align-items-center">
-                    {data.map(v => <div className="col-sm-6 col-md-3">
-                        <div className="item">
+                    {data?.map(v => <div className="col-sm-6 col-md-3">
+                        <div key={v.id} className="item">
                             <div>
                                 <span>{v.id}</span>
                             </div>
